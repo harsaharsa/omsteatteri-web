@@ -1,0 +1,23 @@
+{
+  "name": "oms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "auto-reload-brunch": "^1.8.0",
+    "autoprefixer": "^5.2.0",
+    "brunch": "^1.8.5",
+    "concurrently": "^0.1.1",
+    "css-brunch": "^1.7.0",
+    "growl": "^1.8.1",
+    "javascript-brunch": "^1.7.1",
+    "postcss-brunch": "^0.4.2",
+    "postcss-nested": "^0.3.2",
+    "postcss-simple-vars": "^0.3.0"
+  }
+}

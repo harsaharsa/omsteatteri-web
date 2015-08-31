@@ -1,0 +1,92 @@
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Parallax test</title>
+
+<!-- 	<link rel='stylesheet' href='app.css'>
+	<script src='app.js'></script>
+ -->	
+
+<style>
+
+	body {
+		font-family: Helvetica;
+		margin: 0;
+	}
+
+	.parallax-container {
+		perspective: 1px;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		background: rgb(250, 250, 250);
+	}
+
+	.parallax-layer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		padding: 100vh 0;
+		border: 11px dotted black;
+	}
+
+	.title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		font-size: 32px;
+	}
+
+	/* moves slowly; blue */
+	.background {
+		/*transform: translateZ(-1px) scale(2);*/
+		transform: translateZ(-1px) scale(2);
+		background: rgba(0, 0, 255, 0.3);
+
+		padding-bottom: 0;
+	}
+
+	/* moves quickly; green */
+	.foreground {
+		transform: translateZ(0);
+
+		background: rgba(0, 255, 0, 0.3);
+	}
+
+</style>
+
+</head>
+
+<body>
+
+	<div class="parallax-container">
+
+		<div class="parallax-layer deep-background">
+			<div class="title">
+				Parallax zero (DEEP background)
+			</div>
+		</div>
+
+		<div class="parallax-layer background">
+			<div class="title">
+				Parallax one (background, blue)
+			</div>
+		</div>
+
+		<div class="parallax-layer foreground">
+			<div class="title">
+				Parallax two (foreground, green)
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

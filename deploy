@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync -a -P public/ lakka:sites/anttisykari.kapsi.fi/www/oms
+
