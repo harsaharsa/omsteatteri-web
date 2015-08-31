@@ -1,4 +1,17 @@
 #!/bin/bash
 
-rsync -a -P public/ lakka:sites/anttisykari.kapsi.fi/www/oms
+# Fail on error
+set -e
+
+# Syncing without deleting
+CMD_WITHOUT_DELETE="s3cmd sync public/ s3://omsteatteri.fi --acl-public --no-delete-removed --exclude='.DS_Store'"
+
+# Syncing again WITH deleting
+CMD_WITH_DELETE="s3cmd sync public/ s3://omsteatteri.fi --acl-public --delete-removed --exclude='.DS_Store'"
+
+echo "running $CMD_WITHOUT_DELETE"
+eval $CMD_WITHOUT_DELETE
+
+# echo "running $CMD_WITH_DELETE"
+# eval $CMD_WITH_DELETE
 
